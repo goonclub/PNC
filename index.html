@@ -618,12 +618,18 @@
             bottom: 0;
             margin-top: 2.5rem;
             padding-bottom: 1.5rem;
-            /* Space above icons */
+
+        }
+
+        .social-links {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 25px;
             z-index: 2;
+            gap: 25px;
+            margin-bottom: 20px;
+            /* Space above icons */
+
             /* Space between icons */
         }
 
@@ -942,48 +948,7 @@
             /* Uses default H2 styles */
         }
 
-        .social-links {
-            /* For community section */
-            margin-top: 30px;
-            margin-bottom: 40px;
-        }
 
-        .social-links a {
-            /* For community section */
-            display: inline-block;
-            margin: 0 15px;
-            font-size: 2rem;
-            transition: transform 0.3s ease;
-            color: var(--gold-mid);
-        }
-
-        .social-links a:hover {
-            transform: scale(1.2);
-            color: var(--gold-light);
-        }
-
-        /* Icons for community section socials */
-        .social-links a::before {
-            display: inline-block;
-            font-style: normal;
-            font-variant: normal;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            font-family: "Arial", sans-serif;
-            font-weight: bold;
-        }
-
-        .social-links .social-telegram::before {
-            content: "T";
-        }
-
-        .social-links .social-twitter::before {
-            content: "X";
-        }
-
-        .social-links .social-discord::before {
-            content: "D";
-        }
 
 
         /* --- Footer --- */
@@ -1396,12 +1361,13 @@
             <!-- NEW: Hero Socials -->
 
         </div>
-        <div class="hero-socials">
+        <div class="hero-socials social-links">
             <a href="#" target="_blank" title="Instagram" class="hero-social-button"><img
                     src="https://raw.githubusercontent.com/goonclub/PNC/refs/heads/main/insta logo 1.png" alt=""></a>
-            <a href="#" target="_blank" title="Twitter" class="hero-social-button"><img
+            <a href="https://x.com/niggacommittee" target="_blank" title="Twitter" class="hero-social-button"><img
                     src="https://raw.githubusercontent.com/goonclub/PNC/refs/heads/main/x logo.png" alt=""></a>
-            <a href="#" target="_blank" title="Telegram Channel" class="hero-social-button"><img
+            <a href="https://t.me/publicniggacommittee" target="_blank" title="Telegram Channel"
+                class="hero-social-button"><img
                     src="https://raw.githubusercontent.com/goonclub/PNC/refs/heads/main/telegram logo.png" alt=""></a>
             <!-- <a href="#" target="_blank" class="hero-social-link social-x" title="Official Feed (X)"></a>
                 <a href="#" target="_blank" class="hero-social-link social-telegram" title="Telegram Channel"></a>
@@ -1578,9 +1544,19 @@
             <h2>Official Communique Channels</h2>
             <p>Maintain contact with Committee operations. Access designated channels for directives and updates.</p>
             <div class="social-links">
-                <a href="#" target="_blank" class="social-telegram" title="Telegram Channel"></a>
-                <a href="#" target="_blank" class="social-twitter" title="Official Feed (X)"></a>
-                <a href="#" target="_blank" class="social-discord" title="Discord Server (Optional)"></a>
+                <a href="#" target="_blank" title="Instagram" class="hero-social-button"><img
+                        src="https://raw.githubusercontent.com/goonclub/PNC/refs/heads/main/insta logo 1.png"
+                        alt=""></a>
+                <a href="https://x.com/niggacommittee" target="_blank" title="Twitter" class="hero-social-button"><img
+                        src="https://raw.githubusercontent.com/goonclub/PNC/refs/heads/main/x logo.png" alt=""></a>
+                <a href="https://t.me/publicniggacommittee" target="_blank" title="Telegram Channel"
+                    class="hero-social-button"><img
+                        src="https://raw.githubusercontent.com/goonclub/PNC/refs/heads/main/telegram logo.png"
+                        alt=""></a>
+                <!-- <a href="#" target="_blank" class="hero-social-link social-x" title="Official Feed (X)"></a>
+                    <a href="#" target="_blank" class="hero-social-link social-telegram" title="Telegram Channel"></a>
+                    <a href="#" target="_blank" class="hero-social-link social-instagram" title="Instagram"></a> -->
+                <!-- Add others as needed -->
             </div>
             <a href="[Link to Buy PNC]" class="btn-gold-sharp" target="_blank">Acquire PNC Assets</a>
         </div>
