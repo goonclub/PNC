@@ -1377,8 +1377,8 @@
 
     <!-- Hero Section -->
     <section id="hero">
-        <video autoplay muted loop playsinline
-            poster="https://github.com/goonclub/PNC/blob/main/BG%20poster.png?raw=true" id="video-bg">
+        <video muted loop playsinline poster="https://github.com/goonclub/PNC/blob/main/BG%20poster.png?raw=true"
+            id="video-bg">
             <!-- UPDATE PATH if needed -->
             <source src="https://github.com/goonclub/PNC/raw/refs/heads/main/BG%20vid.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -1622,6 +1622,8 @@
             const popupTitle = document.getElementById('popup-title');
             const popupInstruction = document.getElementById('popup-instruction');
             const anthemAudio = document.getElementById('anthem-audio');
+            const videoBg = document.getElementById('video-bg'); // your video element
+
 
             // --- NEW Element Reference ---
             const musicToggleButton = document.getElementById('music-toggle-btn');
@@ -1739,6 +1741,9 @@
                 popupOverlay.style.opacity = '0';
                 // Try playing audio
                 anthemAudio.play().then(() => {
+
+                    videoBg.style.display = "block"; // show video
+                    videoBg.play().catch(err => console.error("Video play failed:", err));
                     console.log("Anthem playback initiated.");
                     musicToggleButton.classList.remove('paused');
                     // UPDATE: Use Material Symbol
@@ -1796,6 +1801,8 @@
             musicToggleButton.addEventListener('click', () => {
                 if (anthemAudio.paused) {
                     anthemAudio.play().then(() => {
+
+
                         musicToggleButton.classList.remove('paused');
                         // UPDATE: Use Material Symbol
                         musicToggleButton.innerHTML = '<span class="material-symbols-outlined">volume_up</span>';
