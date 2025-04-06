@@ -78,6 +78,14 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            user-select: none;
+        }
+
+        /* Allow text selection for specific elements */
+        selectable-text,
+        .selectable {
+            user-select: text;
+            /* Make these elements selectable */
         }
 
         html {
@@ -1596,10 +1604,10 @@
 
     <script>
 
-        if (window.location.hostname !== "publicniggacommittee.com") {
-            document.body.innerHTML = ""; // Hide all content
-            alert("Unauthorized domain."); // Optional
-        }
+        // if (window.location.hostname !== "publicniggacommittee.com") {
+        //     document.body.innerHTML = ""; // Hide all content
+        //     alert("Unauthorized domain."); // Optional
+        // }
         document.addEventListener('DOMContentLoaded', () => {
             // --- Existing Element References ---
             const popupOverlay = document.getElementById('popup-overlay');
