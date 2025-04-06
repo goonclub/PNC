@@ -887,7 +887,7 @@
 
         .official-card {
             background-color: var(--card-bg);
-            /* border: 1px solid var(--border-gold); */
+            border: 1px solid var(--border-gold);
             border-radius: 0;
             text-align: center;
             padding: 25px;
@@ -1211,8 +1211,8 @@
             }
 
             #fingerprint-scan-btn {
-                width: 100px;
-                height: 100px;
+                width: 150px;
+                height: 150px;
             }
 
             #scan-status {
@@ -1297,8 +1297,8 @@
 
             /* Make official images slightly bigger on single column */
             #fingerprint-scan-btn {
-                width: 90px;
-                height: 90px;
+                width: 150px;
+                height: 150px;
             }
 
             #music-toggle-btn {
@@ -1319,10 +1319,8 @@
         <div id="popup-box">
             <button id="popup-close-btn" title="Close">×</button>
             <h2 id="popup-title">IDENTITY VERIFICATION</h2>
-            <p id="popup-instruction"><span>Note: WE ARE NOT LIVE YET</span></br> Hold your veiny Dih on scanner for
+            <p id="popup-instruction">Hold your veiny Dih on scanner for
                 Committee access confirmation.
-
-
             </p>
 
             <!-- Modified Scan Button -->
@@ -1590,10 +1588,11 @@
 
 
     <script>
-if (window.location.hostname !== "publicniggacommittee.com") {
-    document.body.innerHTML = ""; // Hide all content
-    alert("Unauthorized domain."); // Optional
-  }
+
+        // if (window.location.hostname !== "publicniggacommittee.com") {
+        //     document.body.innerHTML = ""; // Hide all content
+        //     alert("Unauthorized domain."); // Optional
+        // }
         document.addEventListener('DOMContentLoaded', () => {
             // --- Existing Element References ---
             const popupOverlay = document.getElementById('popup-overlay');
@@ -1607,6 +1606,25 @@ if (window.location.hostname !== "publicniggacommittee.com") {
 
             // --- NEW Element Reference ---
             const musicToggleButton = document.getElementById('music-toggle-btn');
+
+            // Disable right-click
+            document.addEventListener('contextmenu', e => e.preventDefault());
+
+            // Disable DevTools shortcut keys
+            document.addEventListener('keydown', function (e) {
+                // F12
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                }
+                // Ctrl+Shift+I or Ctrl+Shift+J
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'J')) {
+                    e.preventDefault();
+                }
+                // Ctrl+U, Ctrl+S, Ctrl+I, Ctrl+Shift+C
+                if ((e.ctrlKey || e.metaKey) && ['u', 's', 'i', 'c'].includes(e.key.toLowerCase())) {
+                    e.preventDefault();
+                }
+            });
 
             // --- State Variables ---
             let isHolding = false;
